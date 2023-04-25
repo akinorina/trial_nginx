@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  reverse-proxy:
+    container_name: nginx
+    build: ./nginx
+    ports:
+      - 80:80
+
+  server1:
+    container_name: server1
+    build: ./server1
+    ports:
+      - 8080:8080
+
+  server2:
+    container_name: server2
+    build: ./server2
+    ports:
+      - 8010:8010
+
+networks:
+  backend: null
