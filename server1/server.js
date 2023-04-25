@@ -11,6 +11,9 @@ const app = express();
 app.get('/', (req, res) => {
   res.send('Hello server1');
 });
+app.get('/about', (req, res) => {
+  res.send('server1 - about page');
+});
 
 app.listen(PORT, HOST, () => {
   console.log(`Running on http://${HOST}:${PORT}`);
